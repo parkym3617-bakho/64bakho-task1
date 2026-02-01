@@ -47,10 +47,16 @@ customElements.define('lotto-display', LottoDisplay);
 document.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.getElementById('generate-btn');
     const lottoDisplay = document.querySelector('lotto-display');
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const body = document.body;
 
     generateBtn.addEventListener('click', () => {
         const numbers = generateLottoNumbers();
         lottoDisplay.displayNumbers(numbers);
+    });
+
+    themeToggleBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
     });
 
     // Initial generation
