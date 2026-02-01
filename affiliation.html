@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formspree Affiliation</title>
+    <link rel="stylesheet" href="style.css"> <!-- Reusing main styles for consistency -->
+    <link rel="stylesheet" href="affiliation.css">
+</head>
+<body>
+    <header>
+        <h1>Formspree Affiliation Request</h1>
+        <button id="theme-toggle-btn">Toggle Theme</button>
+    </header>
+    <main>
+        <form action="https://formspree.io/f/xzdvbley" method="POST" id="affiliation-form">
+            <p>Please fill out the form below to request an affiliation.</p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="organization">Organization (Optional):</label>
+            <input type="text" id="organization" name="organization">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit Request</button>
+        </form>
+        <div id="form-status"></div>
+    </main>
+    <script src="main.js" type="module"></script> <!-- Reusing main.js for theme toggle -->
+    <script src="affiliation.js" type="module"></script>
+</body>
+</html>
